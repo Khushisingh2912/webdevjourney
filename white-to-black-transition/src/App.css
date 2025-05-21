@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none; /* assuming you're using CustomCursor */
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+  width: 100%;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: background-color 1.5s ease-in-out;
+}
+
+.content {
+  max-width: 90%;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.4s ease-in-out;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+/* Mobile & Tablet Adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 1.5rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
